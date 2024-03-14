@@ -221,6 +221,9 @@ They rest at the bottom of an image, expand upwards upon being clicked, and have
 .image-container {
   width: 100%;
   position: relative;
+  display: flex;
+/* trying to find a setting to add the right amount of space between images */
+  margin-bottom: 100px;
 }
 
 img {
@@ -247,7 +250,7 @@ img {
   border: none;
   cursor: pointer;
   width: 100%;
-  font-size: 50px;
+  font-size: 30px;
 }
 
 /* Styles for the collapsed content */
@@ -431,3 +434,9 @@ img {
   left: 3%;
 }
 }
+/* THESE SETTINGS ARE CURRENTLY BEING TESTED*/
+/* For padded images - at some point I should come through and clean up the order of my CSS. But I imagine it'll be a while before that happens...
+.padded-image-right{
+  padding-left: 40%;
+  padding-right:5%;
+} */
