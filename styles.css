@@ -1,0 +1,433 @@
+/* Set body styles */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 0px; /* Add padding to the top to push the content down */
+  padding-bottom: 40px;
+  background-color: rgb(30,30,30);
+}
+
+/* Styles for the header */
+.header {
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  position: fixed;
+  background-color: rgb(20,50,100);
+  padding: 20px 10px;
+  z-index: 3;
+}
+
+.header a {
+  top: 0;
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: rgb(80,180,80);
+  color: white;
+}
+
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.header-right {
+  float: left;
+}
+
+/* Styles for fixed header and footer */
+.fixed-header,
+.fixed-footer {
+  width: 100%;
+  position: fixed;
+  background: rgb(20,50,100);
+  padding: 10px 0;
+  color: rgb(100,100,200);
+  z-index: 2;
+}
+
+.fixed-header {
+  top: 0;
+}
+
+.fixed-footer {
+  bottom: 0;
+}
+
+/* Container styles */
+.container {
+  width: 80%;
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+/* Styles for navigation links */
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 7px 25px;
+  display: inline-block;
+}
+
+/* Collapsible content styles */
+.collapsible {
+  background-color: rgb(200, 200, 200);
+  color: black;
+  cursor: pointer;
+  padding: 20px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 30px;
+}
+
+
+.active,
+.collapsible:hover {
+  background-color: rgb(150, 150, 150);
+}
+.superimposed-button:hover {
+  background-color: rgb(80,180,80);
+  color:white;
+}
+
+.content {
+  padding: 0 48px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: rgb(240, 240, 240);
+}
+
+.superimposed-content {
+  padding: 0 48px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: rgb(240, 240, 240);
+  z-index:2;
+  width: 172px;
+  position: absolute;
+  top: 32.5%;
+  left: 15%;
+  z-index: 1;
+  transform: translate(-134px, 0px);
+}
+
+
+/* Additional styles for the first content section */
+#first_content {
+  background-color: rgb(240, 240, 240);
+  padding: 80px;
+}
+
+#first_content h2 {
+  color: black;
+}
+
+#first_content h3 {
+  color: black;
+}
+
+#first_content p {
+  color: black;
+}
+
+/* Additional styles for the background image */
+#first_content .backgroundIMG {
+  background-image: url('https://i.imgur.com/zQHE5PL.jpg');
+}
+
+.background-container {
+  margin-top:89px;
+  position: relative; /* To allow absolute positioning of the button inside this container */
+  width: 100%;
+  height: 1400px; /* Set the desired height for the background image */
+  background-image: url('https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/camelathletics.com/images/2020/10/5/Joe_Walewski_3.jpg');
+  background-size: cover; /* Adjust the background image size to cover the container */
+  z-index: 0;
+}
+.superimposed-button {
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  padding: 15px 30px;
+  font-size: 40px;
+  background-color: rgb(255,255,255);
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 2; /* Place the button on top of the background container */
+}
+
+/* Styles for left and right buttons */
+.left-button,
+.right-button {
+  width: 50%;
+  padding: 20px;
+  background-color: rgb(200, 200, 200);
+  color: black;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 30px;
+}
+
+.left-button {
+  background-color: rgb(220, 220, 220);
+  float: left;
+}
+
+.right-button {
+  background-color: rgb(200, 200, 200);
+  float: right;
+}
+
+/* Additional styles for the button content */
+.left-button .content,
+.right-button .content {
+  padding: 10px;
+  max-height: 0; /*Change this??*/ 
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: rgb(240, 240, 240);
+}
+
+
+/*
+The following CSS code is for the buttons on the research and running pages.
+They rest at the bottom of an image, expand upwards upon being clicked, and have a translucent content section.
+*/
+
+/* Styles for the image container */
+.image-container {
+  width: 100%;
+  position: relative;
+}
+
+img {
+  width: 40%;
+  height: auto;
+}
+
+/* Styles for the button and content container */
+.button-container {
+  position: absolute;
+  bottom: 0;
+  width: 40%;
+  background-color: rgba(255, 255, 255, 0.9); /* Translucent white background */
+  overflow: hidden;
+}
+
+/* Styles for the collapse/expand button */
+.expand-button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0,0,0);
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 50px;
+}
+
+/* Styles for the collapsed content */
+.collapsed-content {
+  text-align: center;
+  padding: 20px;
+  display: none;
+  width: 95%;
+  transition: max-height 0.2s ease-out;
+}
+
+/* Styles for the expanded content */
+.expanded-content {
+  display: block;
+  padding: 20px;
+  width: 95%;
+  transition: max-height 0.2s ease-out;
+}
+
+/* Styles for the scrollable content */
+.scrollable-content {
+  max-height: 200px; /* Adjust this value as needed */
+  overflow-y: auto;
+  width: 100%;
+  left: 50px;
+}
+
+/* Styles for the expanded header */
+.expanded-content h2 {
+  text-align: center;
+  margin: 0;
+}
+
+/* Show expanded content when button is clicked */
+.expand-button.clicked + .expanded-content {
+  display: block;
+}
+
+/* Hide collapsed content when button is clicked */
+.expand-button.clicked + .collapsed-content {
+  display: none;
+}
+
+/* Create left button group for the buttons on the left side */
+.left{
+  left: 4%;
+}
+/* Likewise, create the right button group*/
+.right{
+  transform: translateX(57%);
+}
+
+@media screen and (max-width: 500px) {
+  /* MOBILE VERSION */
+  .header a {
+    position: fixed;
+    top: 0;
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .header-right {
+    float: none;
+  }
+  #first_content {
+    background-color: rgb(240, 240, 240);
+    top: 160px;
+  }
+  img {
+    max-width: 100%; /* Set the maximum width to 100% of the parent container */
+    height: auto; /* Let the height adjust proportionally to the width */
+  }
+
+  /* Display the hidden navigation links below the logo link */
+  .header a.logo.active + .header-right.active {
+    display: block;
+    text-align: center;
+  }
+
+  /* Hide the default navigation links */
+  .header-right {
+    display: none;
+  }
+
+  .background-container{
+    transform: translateX(-1000px); /*This is my attempt at getting the image more centered on mobile screens*/
+  }
+  .left-button,
+  .right-button {
+    width: 100%;
+    float: none;
+  }
+
+  /*
+The following CSS code is for the buttons on the research and running pages.
+They rest at the bottom of an image, expand upwards upon being clicked, and have a translucent content section.
+On mobile these buttons are all in the center of the page, with their associated art after.
+*/
+
+/* Styles for the image container */
+.image-container {
+  width: 100%;
+  position: relative;
+}
+
+img {
+  max-width: 94%;
+  height: auto;
+}
+
+/* Styles for the button and content container */
+.button-container {
+  position: absolute;
+  bottom: 0;
+  width: 400px;
+  background-color: rgba(255, 255, 255, 0.9); /* Translucent white background */
+  overflow: hidden;
+}
+
+/* Styles for the collapse/expand button */
+.expand-button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0,0,0);
+  border: none;
+  cursor: pointer;
+  width: 4%;
+  font-size: 20px;
+}
+
+/* Styles for the collapsed content */
+.collapsed-content {
+  text-align: center;
+  padding: 20px;
+  display: none;
+  width: 250px;
+  transition: max-height 0.2s ease-out;
+}
+
+/* Styles for the expanded content */
+.expanded-content {
+  display: block;
+  padding: 20px;
+  width: 94%;
+  transition: max-height 0.2s ease-out;
+}
+
+/* Styles for the scrollable content */
+.scrollable-content {
+  max-height: 200px; /* Adjust this value as needed */
+  overflow-y: auto;
+  width: 350px;
+  left: 50px;
+}
+
+/* Styles for the expanded header */
+.expanded-content h2 {
+  text-align: center;
+  margin: 0;
+}
+
+/* Show expanded content when button is clicked */
+.expand-button.clicked + .expanded-content {
+  display: block;
+}
+
+/* Hide collapsed content when button is clicked */
+.expand-button.clicked + .collapsed-content {
+  display: none;
+}
+
+/* On mobile margins need to be dropped */
+.left{
+  left: 3%;
+}
+/* On mobile left and right are identical*/
+.right{
+  left: 3%;
+}
+}

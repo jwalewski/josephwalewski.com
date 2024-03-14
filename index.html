@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Joseph Walewski</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="header">
+    <a href="/index.html" class="logo">Joseph Walewski</a>
+    <div class="header-right">
+      <a  href="/index.html">Home</a>
+      <a href="/research.html">Research</a>
+      <a href="/running.html">Running</a>
+      <a href="/news.html">News</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+  </div>
+
+    <div class="background-container">
+    <!-- Your button will be placed here -->
+    <button class="superimposed-button">Who's Joe?</button>
+      <div class="superimposed-content">
+          <p>Depends who you ask. My colleagues know me as a knowledgeable and hardworking person, my teammates knew me as committed and competitive, and my friends and family know me as a grateful person. Above all, I know I’m passionate - if I dream of something I achieve it.</p>
+      </div>
+  </div>
+  <div class="fixed-footer">
+    <div class="container">Copyright &copy; 2023 Joseph Walewski</div>
+  </div>
+
+  <script>
+    // Add an event listener to all the collapsible buttons
+    var collapsibleButtons = document.getElementsByClassName('collapsible');
+    for (var i = 0; i < collapsibleButtons.length; i++) {
+      collapsibleButtons[i].addEventListener('click', function () {
+        // Toggle the active class for the clicked button
+        this.classList.toggle('active');
+  
+        // Toggle the content visibility for the clicked button
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        }
+      });
+    }
+  </script>
+<script>
+// Add an event listener to the specific superimposed button
+var superimposedButton = document.querySelector('.superimposed-button');
+superimposedButton.addEventListener('click', function () {
+  // Toggle the active class for the button
+  this.classList.toggle('active');
+
+  // Toggle the content visibility for the clicked button
+  var superimposed_content = this.nextElementSibling;
+  if (superimposed_content.style.maxHeight) {
+    superimposed_content.style.maxHeight = null;
+  } else {
+    superimposed_content.style.maxHeight = superimposed_content.scrollHeight + 'px';
+  }
+});
+</script>
+
+  
+
+</body>
+</html>

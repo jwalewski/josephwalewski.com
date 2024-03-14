@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research</title>
+  <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+  <div class="header">
+    <a href="/index.html" class="logo">Joseph Walewski</a>
+    <div class="header-right">
+      <a href="/index.html">Home</a>
+      <a href="/research.html">Research</a>
+      <a href="/running.html">Running</a>
+      <a href="/news.html">News</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+  </div>
+
+  <div id="first_content">
+    <h2>Running</h2>
+    <p>Running has been my favorite sport since 7th grade. Wether it's scenic trails, dyanmic cityscapes, or refreshing beahces, I always enjoy getting miles in. The following is a rough summary of my running career:</p>
+    
+    <button class="collapsible">Running The Perimeter of Connecticut</button>
+    <div class="content">
+        <p> My best friend and I came up with the idea on June 29th, 2020, back when I was about halfway done running every street of Fairfield. On May 23rd, 2021, the idea finally got off the back burner and came to life - I ran 11.2 miles in Thompson, CT to start my journey. As I type this on July 8th, 2022, I am almost exactly halfway done, and my completion of a 600 mile loop around my home state will be the culumination of my running exploration. As covered by Fairfield HamletHub... </p>
+    </div>
+
+
+    <button class="collapsible">Running Every Street of New London</button>
+    <div class="content">
+        <h3>New London, Connecticut</h3>
+        <p> Just 12 days after running every street of Fairfield I found myself starting down Woodlawn Avenue in New London, my college town. As I found myself essentially repeating my previous challenge I again gained so much perspective on a community which I previously thought I was familar with. As I wrote in a short reflection after finishing, "I discovered a whole new set of stories that are just as much Connecticut as the place I grew up." Running every street of New London made me also appreciate the divide between college students and permanent residents, and how simply seeing the whole city began to ammend it - I will never forget how amazing it felt on April 21st, 2021, I heard a man say "hey, didn't you run every street of New London?" </p>
+        <br>
+        <a href=https://www.conncoll.edu/news/news-archive/2021/walewski-runs-every-street-in-new-london/> <img src=https://www.conncoll.edu/media/news/2021/NewLondonCompleteInside.jpg alt="A map just after I finished running every street of New London."></a>
+    </div>
+
+    <button class="collapsible">Running Every Street of Fairfield</button>
+    <div class="content">
+      <h3>Running Every Street of Fairfield</h3>
+      <p> In April of 2020, due to the COVID-19 pandemic, I was in my hometown for the longest continous period since I was in eigth grade. As I was running one of my usual routes, an epiphany struck me: because I was going to be home for the next 6 months, the only way I could explore new areas was to finally take my high school cross country coach's idea and run every street of my hometown (he ran every street of Exeter and Nottingham, NH). On the 3rd I found myself running down Split Rock Road and my goal became finishing the challange before I went back to school on August 26th, 2020. </p>
+      <p> Below is a map of the progress I had made as of July 2020, with runs color coded by frequency and Fairfield's municipal borders in black. Clicking the image takes you to an article Connecticut College wrote about my story.</p>
+      <br>
+      <a href=https://www.conncoll.edu/news/news-archive/2020/cross-country-runner-runs-every-street/#.YgqU7fXMLOQ> <img src=https://www.conncoll.edu/media/news/2020/WalewskiMapInside.jpg alt="A map of every street I had run in my hometown as of July 2020."></a>
+      </p>
+    </div>
+
+    <button class="collapsible">Running at Connecticut College</button>
+    <div class="content">
+      <h3>Track</h3>
+      <p>In track season I specialized in the 10K, the longest race available at the collegiate level.</p>
+      <h3>Cross Country</h3>
+      <p>The highlight of my cross country experience at Conn was the team qualifying for nationals. While the team usually sends individuals, this was the first team apperance on DIII's largest stage in exactly 20 years!</p>
+    </div>
+    <button class="collapsible">Running at Phillips Exeter</button>
+    <div class="content">
+      <h3>High School Running</h3>
+      <p>The time between 9th and 12th grade was truly transformational to my running career. I went from having just finished my first 10 mile run ever to thinking of that distance as a moderately hard day. The most important change in perspective, though, came with redefining myself and how hard I would work to achieve my goals.</p>
+    </div>
+    <button class="collapsible">Running at Fairfield Woods</button>
+    <div class="content">
+      <h3>The Start of it All</h3>
+        <p>I started my first ever XC season (Fall 2012) with a 10:20 mile. Somehow, something kept me going, and just three months later I was down to a 7:32. Pretty quickly I realized I had talent and liked being outside, both of which inspired me to continue running competitively.</p>
+      \\embed a photo of my journal when I mention my first XC race ever!
+    </div>
+    <!-- Add more HTML content as needed -->
+
+  </div>
+
+  <div class="container">
+    <!-- Rest of your HTML content -->
+    <!-- ... -->
+  </div>
+
+  <div class="fixed-footer">
+    <div class="container">Copyright &copy; 2023 Joseph Walewski</div>
+  </div>
+
+  <script>
+    // Add an event listener to all the collapsible buttons
+    var collapsibleButtons = document.getElementsByClassName('collapsible');
+    for (var i = 0; i < collapsibleButtons.length; i++) {
+      collapsibleButtons[i].addEventListener('click', function () {
+        // Toggle the active class for the clicked button
+        this.classList.toggle('active');
+  
+        // Toggle the content visibility for the clicked button
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        }
+      });
+    }
+  </script>
+  
+
+</body>
+</html>

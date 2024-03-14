@@ -1,0 +1,1 @@
+I'm almost certain the main webpage has to be called index.html. Check the "default" folder for the default files given for a firebase project.
