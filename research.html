@@ -80,7 +80,7 @@
     <img src="https://www.biorxiv.org/content/biorxiv/early/2019/02/16/552513/F2.large.jpg" alt="Image">
     <div class="button-container">
       <button class="expand-button"> STANEX Collaboration at Phillips Exeter Academy</button>
-      <div class="collapsed-content">
+      <div class="expanded-content">
         <h2>My First Research Experience</h2>
         <div class="scrollable-content">
           <p>	My first research experience was the final portion of a year long genetics course at Exeter. The fall term assumed no prior genetics knowledge and provided an introduction to heritability, mendelian genetics, and concepts including dominance, recessiveness, incomplete dominance, and codominance. With this information we solved complex heritability problems, learned about the Hardy-Weinberg equilibrium, and began to explore the molecular basis for the phenomena we observed. 
@@ -110,9 +110,6 @@
           <p>Even before formally beginning a scientific career I’ve always had both a great passion for and curiosity about the natural world. From the time I could talk I wanted to learn more about the ocean and all life within it, and soon after I discovered some brightly colored salamanders at a family friend’s lake house in upstate New York. After this, I completely fell in love with eastern newts, catching some and watching them navigate both terrestrial and aquatic environments. One summer day in 2011 I was at a local pond with my dad and managed to catch a green frog that, interestingly enough, had five feet. The extra appendage sprouted off the lower right leg, effectively functioning as a second copy. My natural curiosity skyrocketed and I rushed over to my dad, wondering how this could have happened. He told me that it was likely due to chemicals in the environment, but also reminded me that newts are capable of regrowing limbs. He then handed me some science articles about how amphibians grow limbs and I fell in love with the topic immediately. To this day my primary interest in science is understanding how exactly salamander tissue regeneration happens. One day I hope it would be possible to apply this knowledge to treatment for human conditions ranging from amputee survivors to those affected by neurodegenerative diseases. I see endless possibilities and this is what has motivated me for many years.</p>
         </div>
       </div>
-      <div class="collapsed-content">
-
-      </div>
     </div>
       <img src="/images/IMG00060-20110615-2009.jpg">
   </div>
@@ -122,25 +119,22 @@
   </div>
 <!-- Testing chatGPT's new suggestion 10.15.23-->
 <script>
-  var collapsibleButtons = document.querySelectorAll('.button-container');
-  collapsibleButtons.forEach(function(button) {
+var collapsibleButtons = document.querySelectorAll('.button-container');
+collapsibleButtons.forEach(function(button) {
     button.addEventListener('click', function () {
-      var buttonId = this.id; // Get the id of the clicked button
-  
-      // Toggle the active class for the clicked button
-      this.classList.toggle('active');
-      //Need a call to toggle the content under this specifc button too
-  
-      // Toggle the content visibility for the clicked button
-      var content = document.getElementById('content' + buttonId.substr(6)); // Extract the number from the button id
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-      } else {
-        content.style.maxHeight = content.scrollHeight + 'px';
-      }
+        // Toggle the active class for the clicked button
+        this.classList.toggle('active');
+        
+        // Toggle the content visibility for the clicked button
+        var content = this.querySelector('.expanded-content'); // Get the content div within the clicked button
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + 'px';
+        }
     });
-  });
-  
+});
+
 </script>
 
 <!-- <script>

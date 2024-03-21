@@ -268,7 +268,7 @@ img {
 
 /* Styles for the expanded content */
 .expanded-content {
-  display: block;
+  max-height: 0px;
   padding: 20px;
   width: 95%;
   transition: max-height 0.2s ease-out;
@@ -399,7 +399,7 @@ img {
 
 /* Styles for the expanded content */
 .expanded-content {
-  display: block;
+  display: none;
   padding: 20px;
   width: 94%;
   transition: max-height 0.2s ease-out;
@@ -421,7 +421,7 @@ img {
 
 /* Show expanded content when button is clicked */
 .expand-button.clicked + .expanded-content {
-  display: block;
+  display: none;
 }
 
 /* Hide collapsed content when button is clicked */
