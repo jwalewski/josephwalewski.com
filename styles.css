@@ -219,11 +219,12 @@ They rest at the bottom of an image, expand upwards upon being clicked, and have
 
 /* Styles for the image container */
 .image-container {
-  width: 100%;
+  width: 92%;
   position: relative;
   display: flex;
 /* trying to find a setting to add the right amount of space between images */
   margin-bottom: 100px;
+  justify-content: space-between;
 }
 
 img {
@@ -291,7 +292,7 @@ img {
 
 /* Hide collapsed content when button is clicked */
 .expand-button.clicked + .collapsed-content {
-  display: none;
+  display: block;
 }
 
 /* Create left button group for the buttons on the left side */

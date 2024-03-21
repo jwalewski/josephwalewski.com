@@ -80,7 +80,7 @@
     <img src="https://www.biorxiv.org/content/biorxiv/early/2019/02/16/552513/F2.large.jpg" alt="Image">
     <div class="button-container">
       <button class="expand-button"> STANEX Collaboration at Phillips Exeter Academy</button>
-      <div class="expanded-content">
+      <div class="collapsed-content">
         <h2>My First Research Experience</h2>
         <div class="scrollable-content">
           <p>	My first research experience was the final portion of a year long genetics course at Exeter. The fall term assumed no prior genetics knowledge and provided an introduction to heritability, mendelian genetics, and concepts including dominance, recessiveness, incomplete dominance, and codominance. With this information we solved complex heritability problems, learned about the Hardy-Weinberg equilibrium, and began to explore the molecular basis for the phenomena we observed. 
@@ -122,13 +122,14 @@
   </div>
 <!-- Testing chatGPT's new suggestion 10.15.23-->
 <script>
-  var collapsibleButtons = document.querySelectorAll('.image-container');
+  var collapsibleButtons = document.querySelectorAll('.button-container');
   collapsibleButtons.forEach(function(button) {
     button.addEventListener('click', function () {
       var buttonId = this.id; // Get the id of the clicked button
   
       // Toggle the active class for the clicked button
       this.classList.toggle('active');
+      //Need a call to toggle the content under this specifc button too
   
       // Toggle the content visibility for the clicked button
       var content = document.getElementById('content' + buttonId.substr(6)); // Extract the number from the button id
