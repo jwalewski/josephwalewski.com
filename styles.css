@@ -99,7 +99,10 @@ nav a {
 
 .active,
 .collapsible:hover {
-  background-color: rgb(150, 150, 150);
+  background-color: rgb(165, 165, 165);
+}
+.expand-button:hover {
+  background-color: rgb(165, 165, 165);
 }
 .superimposed-button:hover {
   background-color: rgb(80,180,80);
