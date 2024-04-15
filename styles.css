@@ -269,7 +269,7 @@ img {
 /* Styles for the expanded content */
 .expanded-content {
   max-height: 0px;
-  padding: 20px;
+  padding-left: 20px;
   width: 95%;
   transition: max-height 0.2s ease-out;
 }
