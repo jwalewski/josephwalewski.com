@@ -152,11 +152,11 @@ nav a {
 }
 
 /* Additional styles for the background image */
-#first_content .backgroundIMG {
+/* #first_content .backgroundIMG {
   background-image: url('https://i.imgur.com/zQHE5PL.jpg');
-}
+} */
 
-.background-container {
+.background-container-index {
   margin-top:89px;
   position: relative; /* To allow absolute positioning of the button inside this container */
   width: 100%;
@@ -306,6 +306,17 @@ img {
 .right{
   transform: translateX(57%);
 }
+
+/* 404 PAGE */
+.background-container-404 {
+  position: center; /* To allow absolute positioning of the button inside this container */
+  width: 100%;
+  height: 1400px; /* Set the desired height for the background image */
+  background-image: url('/images/IMG_1652.jpg');
+  background-size: cover; /* Adjust the background image size to cover the container */
+  z-index: 0;
+}
+
 
 @media screen and (max-width: 500px) {
   /* MOBILE VERSION */
