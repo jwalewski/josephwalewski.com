@@ -85,29 +85,6 @@ nav a {
 }
 
 
-/* Additional styles for the first content section */
-#first_content {
-  background-color: rgb(240, 240, 240);
-  padding: 80px;
-}
-
-#first_content h2 {
-  color: black;
-}
-
-#first_content h3 {
-  color: black;
-}
-
-#first_content p {
-  color: black;
-}
-
-/* Additional styles for the background image */
-/* #first_content .backgroundIMG {
-  background-image: url('https://i.imgur.com/zQHE5PL.jpg');
-} */
-
 .background-container-index {
   margin-top: 90px;
   /*position: relative; /* To allow absolute positioning of the button inside this container */
@@ -181,18 +158,79 @@ nav a {
   z-index: 2; /* Place the button on top of the background container */
 }
 
+
+
+
+
+/*ABOUT ME PAGE
+
+-----------------------------------------------------------------------------------------------
+
+*/
+
+
+/* Additional styles for the first content section */
+#first_content {
+  margin-top: 90px;
+  background-color: rgb(240, 240, 240);
+  padding: 50px;
+}
+
+#first_content h2 {
+  color: black;
+}
+
+#first_content h3 {
+  color: black;
+}
+
+#first_content p {
+  color: black;
+}
+
+
+#whole_width_content {
+  margin-top: 90px;
+  background-color: rgb(240, 240, 240);
+  padding: 50px;
+}
+
+#whole_width_content h2 {
+  color: black;
+}
+
+#whole_width_content h3 {
+  color: black;
+}
+
+#whole_width_content p {
+  color: black;
+}
+
+
+/*RESEARCH AND RUNNING PAGES
+
+-----------------------------------------------------------------------------------------------
+
+*/
+
+
+
+
+
+
+
 /* Styles for left and right buttons */
 .left-button,
 .right-button {
   width: 50%;
-  padding: 20px;
   background-color: rgb(200, 200, 200);
   color: black;
   cursor: pointer;
   border: none;
   text-align: center;
   outline: none;
-  font-size: 30px;
+
 }
 
 .left-button {
@@ -202,8 +240,9 @@ nav a {
 
 .right-button {
   background-color: rgb(200, 200, 200);
-  float: right;
-  transform:translateX(57%); /* This is just a test, should change & may have to add more spots*/ 
+  /* float: right; */
+  transform:translateX(150%); /* This is just a test, should change & may have to add more spots. Also, the font being huge isn't due to it being on the right*/ 
+
 }
 
 /* Additional styles for the button content */
@@ -227,6 +266,7 @@ They rest at the bottom of an image, expand upwards upon being clicked, and have
   width: 92%;
   position: relative;
   display: flex;
+  max-height: 40%; /*This line isn't doing anything to limit the height of the content. However, setting it to px flattens tall images*/
 /* trying to find a setting to add the right amount of space between images */
   margin-bottom: 100px;
   justify-content: space-between;
@@ -308,6 +348,8 @@ img {
 .right{
   transform: translateX(57%);
 }
+
+
 
 /* 404 PAGE */
 .background-container-404 {
