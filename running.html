@@ -19,10 +19,10 @@
   </div>
 
   <div id="first_content">
-    <h2>Running</h2>
+    <h1>Running</h1>
     <p>Running has been my favorite sport since 7th grade. Whether it's scenic trails, dyanmic cityscapes, or refreshing beaches, I always enjoy getting miles in. The following is a rough summary of my running career:</p>
   </div>
-  <br>  <br>  <br>  <br>  <br> <!--obviously 5 line breaks is ridiculous but it's the concept for now that counts--> 
+  <br>  <br>  <br>  <br>  <br> 
   <div class="image-container left">
     <img src="/images/barn_island_stencil_2.png" alt="Barn Island, Stonington, Connecticut">
     <img src="/images/salisbury_2023_08_26.jpg" alt="Salisbury, Connecticut">
@@ -115,29 +115,26 @@
   </div>
 
   <div class="fixed-footer">
-    <div class="container">Copyright &copy; 2024 Joseph Walewski</div>
+    <div class="container">Built from scratch by Joseph Walewski</div>
   </div>
 
-<script>
-var collapsibleButtons = document.querySelectorAll('.button-container');
-collapsibleButtons.forEach(function(button) {
-    button.addEventListener('click', function () {
-        // Toggle the active class for the clicked button
-        this.classList.toggle('active');
-        
-        // Toggle the content visibility for the clicked button
-        var content = this.querySelector('.expanded-content'); // Get the content div within the clicked button
-        if (content.style.maxHeight) {
-            content.style.maxHeight = null;
-        } else {
-            content.style.maxHeight = content.scrollHeight + 'px';
-        }
-    });
-});
+  <script>
+  var collapsibleButtons = document.querySelectorAll('.button-container');
+  collapsibleButtons.forEach(function(button) {
+      button.addEventListener('click', function () {
+          // Toggle the active class for the clicked button
+          this.classList.toggle('active');
+          
+          // Toggle the content visibility for the clicked button
+          var content = this.querySelector('.expanded-content'); // Get the content div within the clicked button
+          if (content.style.maxHeight) {
+              content.style.maxHeight = null;
+          } else {
+              content.style.maxHeight = content.scrollHeight + 'px';
+          }
+      });
+  });
 
-</script>
-
-
-
+  </script>
 </body>
 </html>
