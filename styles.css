@@ -46,8 +46,16 @@ body {
   color: white;
 }
 
-.header-right {
+.header-left {
   float: left;
+}
+
+.header-right {
+  float: right;
+}
+
+.contacts{
+  width: 30px;
 }
 
 /* Styles for fixed header and footer */
@@ -220,16 +228,16 @@ nav a {
 }
 
 .landscape {
-  display: inline;
+  display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 30%;
+  max-width: 100%;
 }
 
 .portrait {
   display: flex;
   align-items: center;
-  max-width: 30%;
+  max-width: 100%;
 }
 
 .landscape img, .portrait img {
@@ -399,7 +407,7 @@ img {
 /*MOBILE VERSION
 
 -----------------------------------------------------------------------------------------------
-
+ - Under 905px the header cuts off, so mobile size will need to be increased
 */
 
 @media screen and (max-width: 500px) {
