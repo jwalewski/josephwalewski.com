@@ -231,13 +231,13 @@ nav a {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 100%;
+  max-width: 50%;
 }
 
 .portrait {
   display: flex;
   align-items: center;
-  max-width: 100%;
+  max-width: 50%;
 }
 
 .landscape img, .portrait img {
@@ -253,9 +253,19 @@ nav a {
 */
 
 
+/* The left and right images have to be in divs so that the .img feature can be 100% wide, so that I don't mess with it and instead use more flexible and unique divs for each page*/
+.left_side_image,
+.right_side_image {
+  width: 40%;
+}
 
-
-
+/*surprisingly, there are no side specifc rules needed atm!*/
+/* .left_side_image {
+  ;
+}
+.right_side_image {
+  ;
+} */
 
 
 /* Styles for left and right buttons */
@@ -311,7 +321,7 @@ They rest at the bottom of an image, expand upwards upon being clicked, and have
 }
 
 img {
-  width: 40%;
+  width: 100%;
   height: auto;
 }
 
