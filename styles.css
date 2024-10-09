@@ -57,8 +57,16 @@ body {
   color: white;
 }
 
-.header-right {
+.header-left {
   float: left;
+}
+
+.header-right {
+  float: right;
+}
+
+.contacts{
+  width: 30px;
 }
 
 /* Styles for fixed header and footer */
@@ -230,7 +238,7 @@ nav a {
 }
 
 .landscape {
-  display: inline;
+  display: flex;
   flex-direction: column;
   gap: 20px;
   max-width: 50%;
@@ -255,9 +263,19 @@ nav a {
 */
 
 
+/* The left and right images have to be in divs so that the .img feature can be 100% wide, so that I don't mess with it and instead use more flexible and unique divs for each page*/
+.left_side_image,
+.right_side_image {
+  width: 40%;
+}
 
-
-
+/*surprisingly, there are no side specifc rules needed atm!*/
+/* .left_side_image {
+  ;
+}
+.right_side_image {
+  ;
+} */
 
 
 /* Styles for left and right buttons */
@@ -312,8 +330,9 @@ They rest at the bottom of an image, expand upwards upon being clicked, and have
   justify-content: space-between;
 }
 
-.image-container img { /*This needs to be narrowed in scope drastically - it's affecting the buttons on the about me page and mobile!*/
-  width: 40%;
+
+img {
+  width: 100%;
   height: auto;
 }
 
@@ -478,7 +497,7 @@ They rest at the bottom of an image, expand upwards upon being clicked, and have
 /*MOBILE VERSION
 
 -----------------------------------------------------------------------------------------------
-
+ - Under 905px the header cuts off, so mobile size will need to be increased
 */
 
 @media screen and (max-width: 500px) {
