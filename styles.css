@@ -1,3 +1,14 @@
+/*DESKTOP VERSION
+
+-----------------------------------------------------------------------------------------------
+
+*/
+/*OVERALL STYLES
+
+-----------------------------------------------------------------------------------------------
+
+*/
+
 /* Set body styles */
 body {
   margin: 0;
@@ -143,20 +154,6 @@ nav a {
   background-color: rgb(240, 240, 240);
 }
 
-.superimposed-content {
-  padding: 0 32px;
-  width: 204px; 
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  background-color: rgb(240, 240, 240);
-  z-index:2;
-  position: absolute;
-  top: 32.5%;
-  left: 30%;
-  z-index: 1;
-  transform: translate(-134px, 0px);
-}
 .superimposed-button {
   position: absolute;
   top: 30%;
@@ -172,7 +169,20 @@ nav a {
   z-index: 2; /* Place the button on top of the background container */
 }
 
-
+.superimposed-content {
+  padding: 0 32px;
+  width: 204px; 
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: rgb(240, 240, 240);
+  z-index:2;
+  position: absolute;
+  top: 34.5%;
+  left: 30%;
+  z-index: 1;
+  transform: translate(-134px, 0px);
+}
 
 
 
@@ -221,7 +231,7 @@ nav a {
   color: black;
 }
 
-.photos_container {
+.photos-container {
   display:flex;
   gap:10%;
   max-width: 100%;
@@ -320,6 +330,7 @@ They rest at the bottom of an image, expand upwards upon being clicked, and have
   justify-content: space-between;
 }
 
+
 img {
   width: 100%;
   height: auto;
@@ -414,6 +425,75 @@ img {
   /* Center the container horizontally */
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*MOBILE VERSION
 
 -----------------------------------------------------------------------------------------------
@@ -422,138 +502,411 @@ img {
 
 @media screen and (max-width: 500px) {
   /* MOBILE VERSION */
-  .header a {
-    position: fixed;
+  /*OVERALL STYLES
+
+-----------------------------------------------------------------------------------------------
+  */
+  /* Set body styles */
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 0px; /* Add padding to the top to push the content down */
+    padding-bottom: 40px;
+    background-color: rgb(30,30,30);
+  }
+
+  /* Styles for the header */
+  .header {
     top: 0;
-    float: none;
-    display: block;
-    text-align: left;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    position: fixed;
+    background-color: rgb(20,50,100);
+    padding: 20px 10px;
+    z-index: 3;
   }
 
-  .header-right {
-    float: none;
-  }
-  #first_content {
-    background-color: rgb(240, 240, 240);
-    top: 160px;
-  }
-  img {
-    max-width: 100%; /* Set the maximum width to 100% of the parent container */
-    height: auto; /* Let the height adjust proportionally to the width */
-  }
-
-  /* Display the hidden navigation links below the logo link */
-  .header a.logo.active + .header-right.active {
-    display: block;
+  .header a {
+    top: 0;
+    float: left;
+    color: white;
     text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
   }
 
-  /* Hide the default navigation links */
+  .header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .header a:hover {
+    background-color: rgb(80,180,80);
+    color: white;
+  }
+
+  .header a.active {
+    background-color: dodgerblue;
+    color: white;
+  }
+
+  .header-left {
+    display: none;
+  }
+
   .header-right {
     display: none;
   }
 
-  .background-container{
-    transform: translateX(-1000px); /*This is my attempt at getting the image more centered on mobile screens*/
+  /* Styles for fixed header and footer */
+  .fixed-header,
+  .fixed-footer {
+    width: 100%;
+    position: fixed;
+    background: rgb(20,50,100);
+    padding: 10px 0;
+    color: rgb(100,100,200);
+    z-index: 2;
   }
+
+  .fixed-header {
+    top: 0;
+  }
+
+  .fixed-footer {
+    bottom: 0;
+    height: 20px;
+  }
+
+  /* Container styles */
+  .container {
+    width: 80%;
+    margin: 0 auto; /* Center the container horizontally */
+  }
+
+  /* Styles for navigation links */
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 7px 25px;
+    display: inline-block;
+  }
+
+
+  /*HOME/INDEX PAGE
+
+  -----------------------------------------------------------------------------------------------
+
+  */
+
+  .background-container-index {
+    margin-top: 30px;
+    /*position: relative; /* To allow absolute positioning of the button inside this container */
+    background-position: center; /*Ideally I'd like this centered 200px down too so it's less of the sky, but rn the image is being duplicated if I try this*/
+    width: auto;
+    height: calc(100vh - 70px); /* Set the desired height for the background image */
+    background-image: url('images/san_pedro_de_atacama_2022_08_25.jpg');
+    background-size: cover; /* Adjust the background image size to cover the container */
+    z-index: 0;
+  }
+  /* Collapsible content styles */
+  .collapsible {
+    background-color: rgb(200, 200, 200);
+    color: black;
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 30px;
+  }
+
+
+  .active,
+  .collapsible:hover {
+    background-color: rgb(165, 165, 165);
+  }
+  .expand-button:hover {
+    background-color: rgb(165, 165, 165);
+  }
+  .superimposed-button:hover {
+    background-color: rgb(80,180,80);
+    color:white;
+  }
+
+  .content {
+    padding: 0 48px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: rgb(240, 240, 240);
+  }
+
+  .superimposed-button {
+    position: absolute;
+    top: 20.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 30px;
+    font-size: 40px;
+    background-color: rgb(255,255,255);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 2; /* Place the button on top of the background container */
+    width: 268px;
+  }
+  .superimposed-content {
+    padding: 0 32px;
+    width: 204px; 
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: rgb(240, 240, 240);
+    z-index:2;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-134px, 0px); /*One half of the button*/
+
+  }
+
+
+
+
+
+  /*ABOUT ME PAGE
+
+  -----------------------------------------------------------------------------------------------
+
+  */
+
+
+  /* Additional styles for the first content section */
+  #first_content {
+    margin-top: 90px;
+    background-color: rgb(240, 240, 240);
+    padding: 50px;
+  }
+
+  #first_content h2 {
+    color: black;
+  }
+
+  #first_content h3 {
+    color: black;
+  }
+
+  #first_content p {
+    color: black;
+  }
+
+
+  .whole_width_content {
+    margin-top: 90px;
+    background-color: rgb(240, 240, 240);
+    padding: 50px;
+  }
+
+  .whole_width_content h2 {
+    color: black;
+  }
+
+  .whole_width_content h3 {
+    color: black;
+  }
+
+  .whole_width_content p {
+    color: black;
+  }
+
+  .photos-container {
+    display:flex;
+    gap:1%;
+    max-width: 100%;
+  }
+
+  .landscape {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 50%;
+  }
+
+  .portrait {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .landscape img, .portrait img {
+    max-width: 100%;
+    height:auto;
+  }
+
+
+  /*RESEARCH AND RUNNING PAGES
+
+  -----------------------------------------------------------------------------------------------
+
+  */
+
+
+
+
+
+
+
+  /* Styles for left and right buttons */
   .left-button,
   .right-button {
-    width: 100%;
-    float: none;
+    width: 50%;
+    background-color: rgb(200, 200, 200);
+    color: black;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    outline: none;
+
   }
 
+  .left-button {
+    background-color: rgb(220, 220, 220);
+    float: left;
+  }
+
+  .right-button {
+    background-color: rgb(200, 200, 200);
+    /* float: right; */
+    transform:translateX(150%); /* This is just a test, should change & may have to add more spots. Also, the font being huge isn't due to it being on the right*/ 
+
+  }
+
+  /* Additional styles for the button content */
+  .left-button .content,
+  .right-button .content {
+    padding: 10px;
+    max-height: 0; /*Change this??*/ 
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: rgb(240, 240, 240);
+  }
+
+
   /*
-The following CSS code is for the buttons on the research and running pages.
-They rest at the bottom of an image, expand upwards upon being clicked, and have a translucent content section.
-On mobile these buttons are all in the center of the page, with their associated art after.
-*/
+  The following CSS code is for the buttons on the research and running pages.
+  They rest at the bottom of an image, expand upwards upon being clicked, and have a translucent content section.
+  */
 
-/* Styles for the image container */
-.image-container {
-  width: 100%;
-  position: relative;
-}
+  /* Styles for the image container */
+  .image-container {
+    width: 92%;
+    position: relative;
+    display: flex;
+    max-height: 40%; /*This line isn't doing anything to limit the height of the content. However, setting it to px flattens tall images*/
+  /* trying to find a setting to add the right amount of space between images */
+    margin-bottom: 100px;
+    justify-content: space-between;
+  }
 
-img {
-  max-width: 94%;
-  height: auto;
-}
+  /* .image-container img { /*rule needs to be more specific! It's affecting the other pages
+    width: 40%;
+    height: auto;
+  } */
 
-/* Styles for the button and content container */
-.button-container {
-  position: absolute;
-  bottom: 0;
-  width: 400px;
-  background-color: rgba(255, 255, 255, 0.9); /* Translucent white background */
-  overflow: hidden;
-}
+  /* Styles for the button and content container */
+  .button-container {
+    position: absolute;
+    bottom: 0;
+    width: 40%;
+    background-color: rgba(255, 255, 255, 0.9); /* Translucent white background */
+    overflow: hidden;
+  }
 
-/* Styles for the collapse/expand button */
-.expand-button {
-  display: block;
-  margin: 0 auto;
-  padding: 10px 20px;
-  background-color: rgb(255, 255, 255);
-  color: rgb(0,0,0);
-  border: none;
-  cursor: pointer;
-  width: 4%;
-  font-size: 20px;
-}
+  /* Styles for the collapse/expand button */
+  .expand-button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0,0,0);
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 30px;
+  }
 
-/* Styles for the collapsed content */
-.collapsed-content {
-  text-align: center;
-  padding: 20px;
-  display: none;
-  width: 250px;
-  transition: max-height 0.2s ease-out;
-}
+  /* Styles for the collapsed content */
+  .collapsed-content {
+    text-align: center;
+    padding: 20px;
+    display: none;
+    width: 95%;
+    transition: max-height 0.2s ease-out;
+  }
 
-/* Styles for the expanded content */
-.expanded-content {
-  display: none;
-  padding: 20px;
-  width: 94%;
-  transition: max-height 0.2s ease-out;
-}
+  /* Styles for the expanded content */
+  .expanded-content {
+    max-height: 0px;
+    padding-left: 20px;
+    width: 95%;
+    transition: max-height 0.2s ease-out;
+  }
 
-/* Styles for the scrollable content */
-.scrollable-content {
-  max-height: 200px; /* Adjust this value as needed */
-  overflow-y: auto;
-  width: 350px;
-  left: 50px;
-}
+  /* Styles for the scrollable content */
+  .scrollable-content {
+    max-height: 200px; /* Adjust this value as needed */
+    overflow-y: auto;
+    width: 100%;
+    left: 50px;
+    text-align: left;
+  }
 
-/* Styles for the expanded header */
-.expanded-content h2 {
-  text-align: center;
-  margin: 0;
-}
+  /* Styles for the expanded header */
+  .expanded-content h2 {
+    text-align: center;
+    margin: 0;
+  }
 
-/* Show expanded content when button is clicked */
-.expand-button.clicked + .expanded-content {
-  display: none;
-}
+  /* Show expanded content when button is clicked */
+  .expand-button.clicked + .expanded-content {
+    display: block;
+  }
 
-/* Hide collapsed content when button is clicked */
-.expand-button.clicked + .collapsed-content {
-  display: none;
-}
+  /* Hide collapsed content when button is clicked */
+  .expand-button.clicked + .collapsed-content {
+    display: block;
+  }
 
-/* On mobile margins need to be dropped */
-.left{
-  left: 3%;
+  /* Create left button group for the buttons on the left side */
+  .left{
+    left: 4%;
+  }
+  /* Likewise, create the right button group*/
+  .right{
+    transform: translateX(57%);
+  }
+
+
+  /*404 PAGE
+
+  -----------------------------------------------------------------------------------------------
+
+  */
+  .background-container-404 {
+    background-position: center bottom; /* To allow absolute positioning of the button inside this container */
+    width: auto;
+    height: calc(100vh - 344px); /* header is 90px, message bar is 224px, and footer is 30px */
+    background-image: url('/images/voluntown.jpg');
+    background-size: cover; /* Adjust the background image size to cover the container */
+    z-index: 0;
+    /* Center the container horizontally */
+  }
 }
-/* On mobile left and right are identical*/
-.right{
-  left: 3%;
-}
-}
-/* THESE SETTINGS ARE CURRENTLY BEING TESTED*/
-/* For padded images - at some point I should come through and clean up the order of my CSS. But I imagine it'll be a while before that happens...
-.padded-image-right{
-  padding-left: 40%;
-  padding-right:5%;
-} */
