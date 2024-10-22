@@ -771,7 +771,9 @@ nav a {
 /* The left and right images have to be in divs so that the .img feature can be 100% wide, so that I don't mess with it and instead use more flexible and unique divs for each page*/
 .left_side_image,
 .right_side_image {
-  width: 40%;
+  width: 90%;
+  justify-content: center;
+  left: 4%;
 }
 
 /*surprisingly, there are no side specifc rules needed atm!*/
@@ -786,7 +788,7 @@ nav a {
 /* Styles for left and right buttons */
 .left-button,
 .right-button {
-  width: 50%;
+  width: 90%;
   background-color: rgb(200, 200, 200);
   color: black;
   cursor: pointer;
@@ -827,12 +829,12 @@ They rest at the bottom of an image, expand upwards upon being clicked, and have
 /* Styles for the image container */
 .image-container {
   width: 92%;
-  position: relative;
   display: flex;
   max-height: 40%; /*This line isn't doing anything to limit the height of the content. However, setting it to px flattens tall images*/
 /* trying to find a setting to add the right amount of space between images */
   margin-bottom: 100px;
-  justify-content: space-between;
+  justify-content: center;
+  left: 10%;
 }
 
 img {
@@ -844,7 +846,7 @@ img {
 .button-container {
   position: absolute;
   bottom: 0;
-  width: 40%;
+  width: 90%;
   background-color: rgba(255, 255, 255, 0.9); /* Translucent white background */
   overflow: hidden;
 }
@@ -910,7 +912,8 @@ img {
 }
 /* Likewise, create the right button group*/
 .right{
-  transform: translateX(57%);
+  left: 4%;
+  transform: translateX(0%);
 }
 
 
