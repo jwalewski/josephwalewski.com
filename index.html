@@ -7,70 +7,101 @@
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 </head>
 <body>
-  <div class="header">
-    <a href="/index.html" class="logo">Joseph Walewski</a>
-    <div class="header-left">
-      <a href="/about_me.html">About Me</a>
-      <a href="/research.html">Research</a>
-      <a href="/research_mobile.html">Research</a>
-      <a href="/running.html">Running</a>
-      <a href="/running_mobile.html">Running</a>
-      <a href="/news.html">News</a>
+  <div class="desktop_version">
+    <div class="header">
+      <a href="/index.html" class="logo">Joseph Walewski</a>
+      <div class="header-left">
+        <a href="/about_me.html">About Me</a>
+        <a href="/research.html">Research</a>
+        <a href="/research_mobile.html">Research</a>
+        <a href="/running.html">Running</a>
+        <a href="/running_mobile.html">Running</a>
+        <a href="/news.html">News</a>
+      </div>
+      <div class="header-right">
+        <a href="https://www.linkedin.com/in/josephwalewski/">LinkedIn</a>
+        <a href="https://github.com/jwalewski">GitHub</a>
+        <a href="https://www.instagram.com/jwalewski_/">Instagram</a>
+      </div>
     </div>
-    <div class="header-right">
-      <a href="https://www.linkedin.com/in/josephwalewski/">LinkedIn</a>
-      <a href="https://github.com/jwalewski">GitHub</a>
-      <a href="https://www.instagram.com/jwalewski_/">Instagram</a>
-    </div>
-  </div>
 
-    <div class="background-container-index">
-    <!-- Your button will be placed here -->
-    <button class="superimposed-button">Who's Joe?</button>
-      <div class="superimposed-content">
-          <p>Depends who you ask. My colleagues know me as a knowledgeable and hardworking person, my teammates knew me as committed and competitive, and my friends and family know me as a grateful person. Above all, I know I’m passionate - if I dream of something I achieve it.</p>
+      <div class="background-container-index">
+      <!-- Your button will be placed here -->
+      <button class="superimposed-button">Who's Joe?</button>
+        <div class="superimposed-content">
+            <p>Depends who you ask. My colleagues know me as a knowledgeable and hardworking person, my teammates knew me as committed and competitive, and my friends and family know me as a grateful person. Above all, I know I’m passionate - if I dream of something I achieve it.</p>
+        </div>
+      </div>
+  </div>
+  <div class="mobile_version">
+    <div class="header-mobile">
+      <div class="button-container header-button">
+        <button class="expand-button header-button">Menu</button>
+        <div class="expanded-content header-button">
+          <h2>Joseph Walewski</h2>
+          <div class="scrollable-content header-button">
+            <div class="header-left">
+              <a href="/index.html" class="logo">Home</a><br>
+              <a href="/about_me.html">About Me</a><br>
+              <a href="/research.html">Research</a><br>
+              <a href="/running.html">Running</a><br>
+              <a href="/news.html">News</a>
+            </div>
+            <div class="header-right">
+              <a href="https://www.linkedin.com/in/josephwalewski/">LinkedIn</a><br>
+              <a href="https://github.com/jwalewski">GitHub</a><br>
+              <a href="https://www.instagram.com/jwalewski_/">Instagram</a>
+            </div>
+          </div>
+        </div>
+        <div class="collapsed-content">
+        </div>
+      </div>
+    </div>
+
+      <div class="background-container-index">
+      <button class="superimposed-button">Who's Joe?</button>
+        <div class="superimposed-content">
+            <p>Depends who you ask. My colleagues know me as a knowledgeable and hardworking person, my teammates knew me as committed and competitive, and my friends and family know me as a grateful person. Above all, I know I’m passionate - if I dream of something I achieve it.</p>
+        </div>
       </div>
   </div>
   <div class="fixed-footer">
     <div class="container"><a href="https://github.com/jwalewski/josephwalewski.com">Built from scratch</a> by Joseph Walewski</div>
   </div>
-
   <script>
-    // Add an event listener to all the collapsible buttons
-    var collapsibleButtons = document.getElementsByClassName('collapsible');
-    for (var i = 0; i < collapsibleButtons.length; i++) {
-      collapsibleButtons[i].addEventListener('click', function () {
-        // Toggle the active class for the clicked button
-        this.classList.toggle('active');
+    var collapsibleButtons = document.querySelectorAll('.button-container');
+    collapsibleButtons.forEach(function(button) {
+        button.addEventListener('click', function () {
+            // Toggle the active class for the clicked button
+            this.classList.toggle('active');
+            
+            // Toggle the content visibility for the clicked button
+            var content = this.querySelector('.expanded-content'); // Get the content div within the clicked button
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+            }
+        });
+    });
   
-        // Toggle the content visibility for the clicked button
-        var content = this.nextElementSibling;
-        if (content.style.maxHeight) {
-          content.style.maxHeight = null;
-        } else {
-          content.style.maxHeight = content.scrollHeight + 'px';
-        }
-      });
+    </script>
+  <script>
+  // Add an event listener to the specific superimposed button
+  var superimposedButton = document.querySelector('.superimposed-button');
+  superimposedButton.addEventListener('click', function () {
+    // Toggle the active class for the button
+    this.classList.toggle('active');
+
+    // Toggle the content visibility for the clicked button
+    var superimposed_content = this.nextElementSibling;
+    if (superimposed_content.style.maxHeight) {
+      superimposed_content.style.maxHeight = null;
+    } else {
+      superimposed_content.style.maxHeight = superimposed_content.scrollHeight + 'px';
     }
+  });
   </script>
-<script>
-// Add an event listener to the specific superimposed button
-var superimposedButton = document.querySelector('.superimposed-button');
-superimposedButton.addEventListener('click', function () {
-  // Toggle the active class for the button
-  this.classList.toggle('active');
-
-  // Toggle the content visibility for the clicked button
-  var superimposed_content = this.nextElementSibling;
-  if (superimposed_content.style.maxHeight) {
-    superimposed_content.style.maxHeight = null;
-  } else {
-    superimposed_content.style.maxHeight = superimposed_content.scrollHeight + 'px';
-  }
-});
-</script>
-
-  
-
 </body>
 </html>
