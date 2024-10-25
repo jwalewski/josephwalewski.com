@@ -85,22 +85,22 @@
             }
         });
     });
-  
     </script>
-  <script>
-  // Add an event listener to the specific superimposed button
-  var superimposedButton = document.querySelector('.superimposed-button');
-  superimposedButton.addEventListener('click', function () {
-    // Toggle the active class for the button
-    this.classList.toggle('active');
+  <script> //Modified to work on both desktop and mobile buttons
+  var superimposedButtons = document.querySelectorAll('.superimposed-button'); //querySelector -> querySelectorAll
+  superimposedButtons.forEach(function (button) { //have to loop for each
+    button.addEventListener('click', function () {
+      // Toggle the active class for the button
+      this.classList.toggle('active');
 
-    // Toggle the content visibility for the clicked button
-    var superimposed_content = this.nextElementSibling;
-    if (superimposed_content.style.maxHeight) {
-      superimposed_content.style.maxHeight = null;
-    } else {
-      superimposed_content.style.maxHeight = superimposed_content.scrollHeight + 'px';
-    }
+      // Toggle the content visibility for the clicked button
+      var superimposed_content = this.nextElementSibling;
+      if (superimposed_content.style.maxHeight) {
+        superimposed_content.style.maxHeight = null;
+      } else {
+        superimposed_content.style.maxHeight = superimposed_content.scrollHeight + 'px';
+      }
+    });
   });
   </script>
 </body>

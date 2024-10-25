@@ -100,7 +100,7 @@
       });
     }
   </script>
-    <script>
+  <script>
   var collapsibleButtons = document.querySelectorAll('.button-container');
   collapsibleButtons.forEach(function(button) {
       button.addEventListener('click', function () {
@@ -118,25 +118,5 @@
   });
 
   </script>
-  <script>
-    var collapsibleButtons = document.querySelectorAll('.button-container');
-    collapsibleButtons.forEach(function(button) {
-        button.addEventListener('click', function () {
-            // Toggle the active class for the clicked button
-            this.classList.toggle('active');
-            
-            // Toggle the content visibility for the clicked button
-            var content = this.querySelector('.expanded-content'); // Get the content div within the clicked button
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-            } else {
-                content.style.maxHeight = content.scrollHeight + 'px';
-            }
-        });
-    });
-  
-  </script>
-  
-
 </body>
 </html>
