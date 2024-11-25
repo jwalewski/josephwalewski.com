@@ -654,7 +654,7 @@ nav a {
 } */
   /* height: auto; Expands to fit content */
   overflow: visible; /* Show all content when expanded */
-  max-height: 400px;
+  /* max-height: 600px; */ /*this setting isn't working right now. javascript keeps making it 228px. Front end looks OK without it though, so it's low priority.*/
   background-color: rgb(20,50,100);
 }
 .first-content{
@@ -670,8 +670,10 @@ nav a {
 }
 .header-button.expanded-content{
   background-color: white;
+  /* height:600px; */ /*this setting isn't working right now. javascript keeps making it 228px. Front end looks OK without it though, so it's low priority.*/
   /*transition: max-height 0.2s ease-out;*/ /*Currently it only moves the backgorund and not the headers inside so it's super ugly*/
-  transition: max-height 0.0s ease-out;
+  transition: max-height 0.0s ease-out; /*Actually, after having had the menu with no delay for so long I'm sure if I even like it with delay.
+  It's important enough to where the user should access it immediately.*/
 }
 
 
