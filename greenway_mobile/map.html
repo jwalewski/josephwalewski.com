@@ -41,11 +41,11 @@
         <script src="data/Long_Island_Sound_0.js"></script>
         <script src="data/Land_1.js"></script>
         <script src="data/Town_of_Fairfield_2.js"></script>
-        <script src="data/Road_3.js"></script>
-        <script src="data/Primary_Secondary_Routes_4.js"></script>
-        <script src="data/Primary_Routes_5.js"></script>
-        <script src="data/I_95_6.js"></script>
-        <script src="data/Merritt_Parkway_7.js"></script>
+        <script src="data/minor_roads_clipped_3.js"></script>
+        <script src="data/primary_secondary_roads_clipped_4.js"></script>
+        <script src="data/primary_routes_clipped_5.js"></script>
+        <script src="data/I_95_clipped_6.js"></script>
+        <script src="data/Merritt_Parkway_clipped_7.js"></script>
         <script src="data/TheConnecticutAudubon_8.js"></script>
         <script src="data/AudubonParcels_9.js"></script>
         <script src="data/PrivateParcels1_10.js"></script>
@@ -85,7 +85,7 @@
         <script>
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[41.09282107422728,-73.34677424066716],[41.235806522727174,-73.10954996826872]]);
+        }).fitBounds([[41.10544202758674,-73.38471556341936],[41.23932321756637,-73.07979135621869]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -391,8 +391,11 @@
         });
         bounds_group.addLayer(layer_Town_of_Fairfield_2);
         map.addLayer(layer_Town_of_Fairfield_2);
-        function pop_Road_3(feature, layer) {
+        function pop_minor_roads_clipped_3(feature, layer) {
             var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['OBJECTID'] !== null ? autolinker.link(String(feature.properties['OBJECTID']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
@@ -422,9 +425,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Road_3_0() {
+        function style_minor_roads_clipped_3_0() {
             return {
-                pane: 'pane_Road_3',
+                pane: 'pane_minor_roads_clipped_3',
                 opacity: 1,
                 color: 'rgba(169,167,167,1.0)',
                 dashArray: '',
@@ -435,21 +438,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_Road_3');
-        map.getPane('pane_Road_3').style.zIndex = 403;
-        map.getPane('pane_Road_3').style['mix-blend-mode'] = 'normal';
-        var layer_Road_3 = new L.geoJson(json_Road_3, {
+        map.createPane('pane_minor_roads_clipped_3');
+        map.getPane('pane_minor_roads_clipped_3').style.zIndex = 403;
+        map.getPane('pane_minor_roads_clipped_3').style['mix-blend-mode'] = 'normal';
+        var layer_minor_roads_clipped_3 = new L.geoJson(json_minor_roads_clipped_3, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Road_3',
-            layerName: 'layer_Road_3',
-            pane: 'pane_Road_3',
-            onEachFeature: pop_Road_3,
-            style: style_Road_3_0,
+            dataVar: 'json_minor_roads_clipped_3',
+            layerName: 'layer_minor_roads_clipped_3',
+            pane: 'pane_minor_roads_clipped_3',
+            onEachFeature: pop_minor_roads_clipped_3,
+            style: style_minor_roads_clipped_3_0,
         });
-        bounds_group.addLayer(layer_Road_3);
-        map.addLayer(layer_Road_3);
-        function pop_Primary_Secondary_Routes_4(feature, layer) {
+        bounds_group.addLayer(layer_minor_roads_clipped_3);
+        map.addLayer(layer_minor_roads_clipped_3);
+        function pop_primary_secondary_roads_clipped_4(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
@@ -483,9 +486,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Primary_Secondary_Routes_4_0() {
+        function style_primary_secondary_roads_clipped_4_0() {
             return {
-                pane: 'pane_Primary_Secondary_Routes_4',
+                pane: 'pane_primary_secondary_roads_clipped_4',
                 opacity: 1,
                 color: 'rgba(68,68,68,1.0)',
                 dashArray: '',
@@ -496,21 +499,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_Primary_Secondary_Routes_4');
-        map.getPane('pane_Primary_Secondary_Routes_4').style.zIndex = 404;
-        map.getPane('pane_Primary_Secondary_Routes_4').style['mix-blend-mode'] = 'normal';
-        var layer_Primary_Secondary_Routes_4 = new L.geoJson(json_Primary_Secondary_Routes_4, {
+        map.createPane('pane_primary_secondary_roads_clipped_4');
+        map.getPane('pane_primary_secondary_roads_clipped_4').style.zIndex = 404;
+        map.getPane('pane_primary_secondary_roads_clipped_4').style['mix-blend-mode'] = 'normal';
+        var layer_primary_secondary_roads_clipped_4 = new L.geoJson(json_primary_secondary_roads_clipped_4, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Primary_Secondary_Routes_4',
-            layerName: 'layer_Primary_Secondary_Routes_4',
-            pane: 'pane_Primary_Secondary_Routes_4',
-            onEachFeature: pop_Primary_Secondary_Routes_4,
-            style: style_Primary_Secondary_Routes_4_0,
+            dataVar: 'json_primary_secondary_roads_clipped_4',
+            layerName: 'layer_primary_secondary_roads_clipped_4',
+            pane: 'pane_primary_secondary_roads_clipped_4',
+            onEachFeature: pop_primary_secondary_roads_clipped_4,
+            style: style_primary_secondary_roads_clipped_4_0,
         });
-        bounds_group.addLayer(layer_Primary_Secondary_Routes_4);
-        map.addLayer(layer_Primary_Secondary_Routes_4);
-        function pop_Primary_Routes_5(feature, layer) {
+        bounds_group.addLayer(layer_primary_secondary_roads_clipped_4);
+        map.addLayer(layer_primary_secondary_roads_clipped_4);
+        function pop_primary_routes_clipped_5(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
@@ -544,9 +547,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Primary_Routes_5_0() {
+        function style_primary_routes_clipped_5_0() {
             return {
-                pane: 'pane_Primary_Routes_5',
+                pane: 'pane_primary_routes_clipped_5',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -557,21 +560,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_Primary_Routes_5');
-        map.getPane('pane_Primary_Routes_5').style.zIndex = 405;
-        map.getPane('pane_Primary_Routes_5').style['mix-blend-mode'] = 'normal';
-        var layer_Primary_Routes_5 = new L.geoJson(json_Primary_Routes_5, {
+        map.createPane('pane_primary_routes_clipped_5');
+        map.getPane('pane_primary_routes_clipped_5').style.zIndex = 405;
+        map.getPane('pane_primary_routes_clipped_5').style['mix-blend-mode'] = 'normal';
+        var layer_primary_routes_clipped_5 = new L.geoJson(json_primary_routes_clipped_5, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Primary_Routes_5',
-            layerName: 'layer_Primary_Routes_5',
-            pane: 'pane_Primary_Routes_5',
-            onEachFeature: pop_Primary_Routes_5,
-            style: style_Primary_Routes_5_0,
+            dataVar: 'json_primary_routes_clipped_5',
+            layerName: 'layer_primary_routes_clipped_5',
+            pane: 'pane_primary_routes_clipped_5',
+            onEachFeature: pop_primary_routes_clipped_5,
+            style: style_primary_routes_clipped_5_0,
         });
-        bounds_group.addLayer(layer_Primary_Routes_5);
-        map.addLayer(layer_Primary_Routes_5);
-        function pop_I_95_6(feature, layer) {
+        bounds_group.addLayer(layer_primary_routes_clipped_5);
+        map.addLayer(layer_primary_routes_clipped_5);
+        function pop_I_95_clipped_6(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
@@ -605,9 +608,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_I_95_6_0() {
+        function style_I_95_clipped_6_0() {
             return {
-                pane: 'pane_I_95_6',
+                pane: 'pane_I_95_clipped_6',
                 opacity: 1,
                 color: 'rgba(0,0,0,1.0)',
                 dashArray: '',
@@ -618,27 +621,27 @@
                 interactive: true,
             }
         }
-        function style_I_95_6_1() {
+        function style_I_95_clipped_6_1() {
             return {
-                pane: 'pane_I_95_6',
+                pane: 'pane_I_95_clipped_6',
                 interactive: true,
             }
         }
-        map.createPane('pane_I_95_6');
-        map.getPane('pane_I_95_6').style.zIndex = 406;
-        map.getPane('pane_I_95_6').style['mix-blend-mode'] = 'normal';
-        var layer_I_95_6 = new L.geoJson.multiStyle(json_I_95_6, {
+        map.createPane('pane_I_95_clipped_6');
+        map.getPane('pane_I_95_clipped_6').style.zIndex = 406;
+        map.getPane('pane_I_95_clipped_6').style['mix-blend-mode'] = 'normal';
+        var layer_I_95_clipped_6 = new L.geoJson.multiStyle(json_I_95_clipped_6, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_I_95_6',
-            layerName: 'layer_I_95_6',
-            pane: 'pane_I_95_6',
-            onEachFeature: pop_I_95_6,
-            styles: [style_I_95_6_0,style_I_95_6_1,]
+            dataVar: 'json_I_95_clipped_6',
+            layerName: 'layer_I_95_clipped_6',
+            pane: 'pane_I_95_clipped_6',
+            onEachFeature: pop_I_95_clipped_6,
+            styles: [style_I_95_clipped_6_0,style_I_95_clipped_6_1,]
         });
-        bounds_group.addLayer(layer_I_95_6);
-        map.addLayer(layer_I_95_6);
-        function pop_Merritt_Parkway_7(feature, layer) {
+        bounds_group.addLayer(layer_I_95_clipped_6);
+        map.addLayer(layer_I_95_clipped_6);
+        function pop_Merritt_Parkway_clipped_7(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
@@ -672,9 +675,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Merritt_Parkway_7_0() {
+        function style_Merritt_Parkway_clipped_7_0() {
             return {
-                pane: 'pane_Merritt_Parkway_7',
+                pane: 'pane_Merritt_Parkway_clipped_7',
                 opacity: 1,
                 color: 'rgba(0,0,0,1.0)',
                 dashArray: '',
@@ -685,26 +688,26 @@
                 interactive: true,
             }
         }
-        function style_Merritt_Parkway_7_1() {
+        function style_Merritt_Parkway_clipped_7_1() {
             return {
-                pane: 'pane_Merritt_Parkway_7',
+                pane: 'pane_Merritt_Parkway_clipped_7',
                 interactive: true,
             }
         }
-        map.createPane('pane_Merritt_Parkway_7');
-        map.getPane('pane_Merritt_Parkway_7').style.zIndex = 407;
-        map.getPane('pane_Merritt_Parkway_7').style['mix-blend-mode'] = 'normal';
-        var layer_Merritt_Parkway_7 = new L.geoJson.multiStyle(json_Merritt_Parkway_7, {
+        map.createPane('pane_Merritt_Parkway_clipped_7');
+        map.getPane('pane_Merritt_Parkway_clipped_7').style.zIndex = 407;
+        map.getPane('pane_Merritt_Parkway_clipped_7').style['mix-blend-mode'] = 'normal';
+        var layer_Merritt_Parkway_clipped_7 = new L.geoJson.multiStyle(json_Merritt_Parkway_clipped_7, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Merritt_Parkway_7',
-            layerName: 'layer_Merritt_Parkway_7',
-            pane: 'pane_Merritt_Parkway_7',
-            onEachFeature: pop_Merritt_Parkway_7,
-            styles: [style_Merritt_Parkway_7_0,style_Merritt_Parkway_7_1,]
+            dataVar: 'json_Merritt_Parkway_clipped_7',
+            layerName: 'layer_Merritt_Parkway_clipped_7',
+            pane: 'pane_Merritt_Parkway_clipped_7',
+            onEachFeature: pop_Merritt_Parkway_clipped_7,
+            styles: [style_Merritt_Parkway_clipped_7_0,style_Merritt_Parkway_clipped_7_1,]
         });
-        bounds_group.addLayer(layer_Merritt_Parkway_7);
-        map.addLayer(layer_Merritt_Parkway_7);
+        bounds_group.addLayer(layer_Merritt_Parkway_clipped_7);
+        map.addLayer(layer_Merritt_Parkway_clipped_7);
         function pop_TheConnecticutAudubon_8(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -5670,11 +5673,11 @@
             {label: '<img src="legend/AudubonParcels_9.png" /> Audubon Parcels', layer: layer_AudubonParcels_9},
             {label: '<img src="legend/TheConnecticutAudubon_8.png" /> The Connecticut Audubon', layer: layer_TheConnecticutAudubon_8},]},
         {label: '<b>Base</b>',  selectAllCheckbox: true, children: [
-            {label: '<img src="legend/Merritt_Parkway_7.png" /> Merritt_Parkway', layer: layer_Merritt_Parkway_7},
-            {label: '<img src="legend/I_95_6.png" /> I_95', layer: layer_I_95_6},
-            {label: '<img src="legend/Primary_Routes_5.png" /> Primary_Routes', layer: layer_Primary_Routes_5},
-            {label: '<img src="legend/Primary_Secondary_Routes_4.png" /> Primary_Secondary_Routes', layer: layer_Primary_Secondary_Routes_4},
-            {label: '<img src="legend/Road_3.png" /> Road', layer: layer_Road_3},
+            {label: '<img src="legend/Merritt_Parkway_clipped_7.png" /> Merritt_Parkway_clipped', layer: layer_Merritt_Parkway_clipped_7},
+            {label: '<img src="legend/I_95_clipped_6.png" /> I_95_clipped', layer: layer_I_95_clipped_6},
+            {label: '<img src="legend/primary_routes_clipped_5.png" /> primary_routes_clipped', layer: layer_primary_routes_clipped_5},
+            {label: '<img src="legend/primary_secondary_roads_clipped_4.png" /> primary_secondary_roads_clipped', layer: layer_primary_secondary_roads_clipped_4},
+            {label: '<img src="legend/minor_roads_clipped_3.png" /> minor_roads_clipped', layer: layer_minor_roads_clipped_3},
             {label: '<img src="legend/Town_of_Fairfield_2.png" /> Town_of_Fairfield', layer: layer_Town_of_Fairfield_2},
             {label: '<img src="legend/Land_1.png" /> Land', layer: layer_Land_1},
             {label: '<img src="legend/Long_Island_Sound_0.png" /> Long_Island_Sound', layer: layer_Long_Island_Sound_0},]},]
@@ -5689,15 +5692,15 @@
         });
         lay.addTo(map);
         setBounds();
-        resetLabels([layer_Road_3,layer_StateofConnecticut_21,layer_FairfieldTownOf_26]);
+        resetLabels([layer_StateofConnecticut_21,layer_FairfieldTownOf_26]);
         map.on("zoomend", function(){
-            resetLabels([layer_Road_3,layer_StateofConnecticut_21,layer_FairfieldTownOf_26]);
+            resetLabels([layer_StateofConnecticut_21,layer_FairfieldTownOf_26]);
         });
         map.on("layeradd", function(){
-            resetLabels([layer_Road_3,layer_StateofConnecticut_21,layer_FairfieldTownOf_26]);
+            resetLabels([layer_StateofConnecticut_21,layer_FairfieldTownOf_26]);
         });
         map.on("layerremove", function(){
-            resetLabels([layer_Road_3,layer_StateofConnecticut_21,layer_FairfieldTownOf_26]);
+            resetLabels([layer_StateofConnecticut_21,layer_FairfieldTownOf_26]);
         });
         </script>        
     </body>
