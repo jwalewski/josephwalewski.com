@@ -1,0 +1,161 @@
+.top_banner {
+    position: absolute;
+    z-index: 1000;
+    padding: 0px;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    pointer-events: none;
+    background-color: rgba(50, 50, 50, 0.9);
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    color: rgb(200,230,200);
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.overlay {
+    position: absolute;
+    z-index: 1000;
+    padding: 10px;
+    top: 10px;
+    left: 10px;
+    width: 30%;
+    max-height: calc(100vh - 20px);
+    background-color: rgba(50, 50, 50, 0.9);
+    color: rgb(200,230,200);
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.overlay li {
+  padding-left: 10px;
+}
+.overlay ul {
+  padding-left: 10px;
+}
+
+
+.button {
+    position: absolute;
+    z-index: 1000;
+    padding: 10px;
+    top: 10px;
+    right: 10px;
+    width: 30%;
+    pointer-events: auto;
+    background-color: rgba(250, 250, 250, 0.9);
+    text-align: center;
+    cursor: pointer;
+}
+.button-header {
+    z-index: 1000;
+    padding: 10px;
+    top: 10px;
+    right: 10px;
+    width: 100%;
+    pointer-events: auto;
+    background-color: rgba(250, 250, 250, 0.9);
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+/* Collapsible content - taken from my personal website*/
+/* Styles for the button and content container */
+
+.active,
+.collapsible:hover {
+  background-color: rgb(165, 165, 165);
+}
+.expand-button:hover {
+  background-color: rgb(165, 165, 165);
+}
+.button-header:hover{
+  background-color: rgb(165, 165, 165);
+}
+.button-container {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9); /* Translucent white background */
+  overflow: hidden;
+}
+
+/* Styles for the collapse/expand button */
+.expand-button {
+  display: block;
+  margin: 0 auto;
+  background-color: rgb(250, 250, 250);
+  color: rgb(50,50,50);
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 20px;
+}
+/*Styles for the button header*/
+.button-header {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 10px;
+  background-color: rgb(250, 250, 250);
+  color: rgb(50,50,50);
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 20px;
+}
+
+/* Styles for the collapsed content */
+.collapsed-content {
+  text-align: center;
+  padding: 20px;
+  display: none;
+  width: 95%;
+  transition: max-height 0.2s ease-out;
+}
+
+/* Styles for the expanded content */
+.expanded-content {
+  max-height: 0px;
+  padding-left: 5px;
+  width: 95%;
+  transition: max-height 0.2s ease-out;
+  overflow: hidden;
+  color: rgb(50,50,50);
+
+}
+
+/* Styles for the scrollable content */
+.scrollable-content {
+  max-height: 100%; /* Adjust this value as needed */
+  overflow-y: auto;
+  width: 100%;
+  left: 50px;
+  text-align: left;
+  flex: 1;
+
+}
+
+/* Styles for the expanded header */
+.expanded-content h2 {
+  text-align: center;
+  margin: 0;
+}
+
+/* Show expanded content when button is clicked */
+.expand-button.clicked + .expanded-content {
+  display: block;
+}
+
+/* Hide collapsed content when button is clicked */
+.expand-button.clicked + .collapsed-content {
+  display: block;
+}
+
+
+.overlay a {
+  color: rgb(200, 230, 230) !important;
+}
